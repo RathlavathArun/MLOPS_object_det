@@ -1,0 +1,8 @@
+artifact_location: file:///D:/mlops_finalproject/mlruns/624373799639572940
+creation_time: 1776501381782
+experiment_id: '624373799639572940'
+last_update_time: 1776501381782
+lifecycle_stage: active
+name: yolo_project
+trace_location: null
+workspace: default

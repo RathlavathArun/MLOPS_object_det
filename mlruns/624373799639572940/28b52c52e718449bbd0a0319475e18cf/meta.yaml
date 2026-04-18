@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/mlops_finalproject/mlruns/624373799639572940/28b52c52e718449bbd0a0319475e18cf/artifacts
+end_time: 1776524024104
+entry_point_name: ''
+experiment_id: '624373799639572940'
+lifecycle_stage: active
+run_id: 28b52c52e718449bbd0a0319475e18cf
+run_name: salty-roo-541
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776514377211
+status: 3
+tags: []
+user_id: Arun

@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/mlops_finalproject/mlruns/624373799639572940/fff59bd1bde4420c93ae0da139b968c3/artifacts
+end_time: 1776505994666
+entry_point_name: ''
+experiment_id: '624373799639572940'
+lifecycle_stage: active
+run_id: fff59bd1bde4420c93ae0da139b968c3
+run_name: bright-skink-549
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1776501381990
+status: 3
+tags: []
+user_id: Arun
