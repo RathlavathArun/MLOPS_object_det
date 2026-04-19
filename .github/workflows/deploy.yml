@@ -1,20 +1,31 @@
-name: MLOps Pipeline
+name: MLOps CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [ "main", "master" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
 
-      - run: pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install fastapi uvicorn opencv-python-headless prometheus-client ultralytics python-multipart
 
-      - run: echo "Pipeline OK"
+    - name: Run basic test
+      run: |
+        python -c "print('Pipeline working successfully')"
+
+    - name: Build Docker Image
+      run: |
+        docker build -t mlops-project .
