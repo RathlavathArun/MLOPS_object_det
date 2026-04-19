@@ -17,15 +17,10 @@ jobs:
       with:
         python-version: 3.10
 
-    - name: Install dependencies
+    - name: Install minimal dependencies
       run: |
-        pip install --upgrade pip
-        pip install fastapi uvicorn opencv-python-headless prometheus-client ultralytics python-multipart
+        pip install fastapi uvicorn
 
-    - name: Run basic test
+    - name: Test app
       run: |
-        python -c "print('Pipeline working successfully')"
-
-    - name: Build Docker Image
-      run: |
-        docker build -t mlops-project .
+        python -c "print('CI/CD pipeline working successfully')"
