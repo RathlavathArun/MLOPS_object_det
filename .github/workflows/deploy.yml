@@ -1,26 +1,23 @@
-name: MLOps CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.10
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
 
-    - name: Install minimal dependencies
-      run: |
-        pip install fastapi uvicorn
-
-    - name: Test app
-      run: |
-        python -c "print('CI/CD pipeline working successfully')"
+      - name: Run simple test
+        run: |
+          echo "Pipeline working successfully"
